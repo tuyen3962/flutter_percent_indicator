@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/model/percent_model.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class SampleLinearPage extends StatefulWidget {
@@ -30,6 +31,19 @@ class _SampleLinearPageState extends State<SampleLinearPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: SplitLinearIndicator(
+                  height: 8,
+                  models: [
+                    PercentModel(percent: 0.2, color: Colors.orange),
+                    PercentModel(percent: 0.3, color: Colors.black),
+                    PercentModel(percent: 0.1, color: Colors.pink),
+                    PercentModel(percent: 0.2, color: Colors.black),
+                    PercentModel(percent: 0.2, color: Colors.blue)
+                  ],
+                ),
+              ),
               Padding(
                 padding: EdgeInsets.all(15.0),
                 child: LinearPercentIndicator(
